@@ -8,11 +8,13 @@ namespace TestServiceStackDbMigration.Migrations
     {
         class MyTable
         {
-            [Index]
-            public string Code { get; set; }
+            // 通过该注释更新会创建主键，如果表中已存在主键，则更新失败。
+            //[Index]
+            //public string Code { get; set; }
 
-            [RenameColumn("Name")]
-            public string? FullName { get; set; }
+            // 使用该注释更名，报错。
+            //[RenameColumn("Name")]
+            //public string? FullName { get; set; }
 
             [RemoveColumn]
             public double ToDelete { get; set; }
