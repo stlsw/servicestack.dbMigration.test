@@ -24,8 +24,9 @@ var dbFactory = new OrmLiteConnectionFactory("Server=localhost;Database=TestServ
 */
 //var migrator = new Migrator(dbFactory, typeof(Migration1000));   // 执行单个更新
 //var migrator = new Migrator(dbFactory, typeof(Migration1000).Assembly);   // 执行所有更新。
-//var migrator = new Migrator(dbFactory, typeof(Migration1001));
-var migrator = new Migrator(dbFactory, typeof(Migration1002));
+//var migrator = new Migrator(dbFactory, typeof(Migration1001));   // 删除字段。
+//var migrator = new Migrator(dbFactory, typeof(Migration1002));   // 添加了字段，但未添加索引。
+var migrator = new Migrator(dbFactory, typeof(Migration1003));   // 字段重命名更新失败。
 try
 {
     var result = migrator.Run();

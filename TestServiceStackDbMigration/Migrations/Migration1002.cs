@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace TestServiceStackDbMigration.Migrations
 {
+    /// <summary>
+    /// 此更新不可用。
+    /// </summary>
     public class Migration1002 : MigrationBase
     {
         public override void Up()
